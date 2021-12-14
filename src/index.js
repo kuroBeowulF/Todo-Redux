@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./Reducers/Store";
+import 'antd/dist/antd.css';
 
 store.subscribe(() => console.log(store.getState()));
 ReactDOM.render(
