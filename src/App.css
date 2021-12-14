@@ -1,0 +1,141 @@
+.headerBox {
+  width: 80%;
+  height: 300px;
+  background-color: rgb(79, 166, 238);
+  color: white;
+  margin: 20px auto;
+  border-radius: 15px 15px 50% 50%;
+  padding: 40px 50px 0 40px;
+  font-size: 20px;
+}
+.footerBox {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(79, 166, 238);
+  color: rgb(179, 207, 230);
+  font-size: 16px;
+  padding: 30px 0 0 40px;
+  position: fixed;
+  bottom: 0;
+}
+.contentBox {
+  width: 60%;
+  height: 400px;
+  overflow: auto;
+  margin: 0 auto;
+}
+.ul {
+  position: absolute;
+  left: 7%;
+  list-style: none;
+  line-height: 30px;
+}
+.ul li {
+  border: 2px solid rgb(45, 112, 65);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.ulTitle {
+  font-size: 20;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  width: 40px;
+  height: 30px;
+  color: brown;
+  margin-right: 30px;
+}
+.ulInfo {
+  font-size: 18;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: brown;
+}
+.addTodoBox {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.addTodoBox button:hover {
+  background-color: brown;
+  color: antiquewhite;
+  border: none;
+  border-radius: 50%;
+}
+.addTodoBox button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid rgb(45, 112, 65);
+  color: brown;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.addTodoBox input {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 2px solid rgb(45, 112, 65);
+}
+.todosList {
+  width: 68%;
+  margin: 10px auto;
+}
+.todo {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 20px;
+  border: 2px solid rgb(45, 112, 65);
+  border-radius: 40px;
+  margin-top: 10px;
+}
+.editBox {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-image: url("./asets/image/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.editContentBox {
+  height: 400px;
+  width: 400px;
+  margin-top: 350px;
+  text-align: center;
+  margin-right: 80px;
+}
+.editinp {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(217, 225, 230);
+  color: brown;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.editCheckbox {
+  margin-top: 40px;
+}
+.editBTN {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+  margin-top: 50px;
+}
+.editBTN:hover {
+  background-color: white;
+  color: brown;
+}
