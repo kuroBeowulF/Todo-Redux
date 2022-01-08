@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { store, persistore } from "./Reducers/Store";
+import { store, persistore } from "./Redux/Store";
 import { PersistGate } from "redux-persist/integration/react";
 import "antd/dist/antd.css";
 

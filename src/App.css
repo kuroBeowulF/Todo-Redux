@@ -13,28 +13,35 @@
   height: 50px;
   background-color: rgb(79, 166, 238);
   color: rgb(179, 207, 230);
+  display: flex;
+  align-items: center;
   font-size: 16px;
-  padding: 30px 0 0 40px;
+  padding-left: 5%;
   position: fixed;
   bottom: 0;
 }
 .contentBox {
-  width: 60%;
-  height: 400px;
-  overflow: auto;
+  width: 80%;
   margin: 0 auto;
 }
+.content {
+  height: 300px;
+  width: 100%;
+}
+.panel {
+}
+
 .ul {
-  position: absolute;
-  left: 7%;
   list-style: none;
   line-height: 30px;
 }
+
 .ul li {
   border: 2px solid rgb(45, 112, 65);
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 5px;
+  width: 120px;
 }
 .ulTitle {
   font-size: 20;
@@ -57,12 +64,6 @@
   display: flex;
   justify-content: center;
 }
-.addTodoBox button:hover {
-  background-color: brown;
-  color: antiquewhite;
-  border: none;
-  border-radius: 50%;
-}
 .addTodoBox button {
   width: 50px;
   height: 50px;
@@ -73,6 +74,15 @@
   color: brown;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addTodoBox button:hover {
+  background-color: brown;
+  color: antiquewhite;
+  border: none;
+  border-radius: 50%;
 }
 .addTodoBox input {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -81,7 +91,10 @@
 }
 .todosList {
   width: 68%;
+  max-height: 200px;
   margin: 10px auto;
+  overflow: auto;
+  margin: 0 auto;
 }
 .todo {
   width: 100%;
@@ -93,6 +106,10 @@
   border: 2px solid rgb(45, 112, 65);
   border-radius: 40px;
   margin-top: 10px;
+}
+.todoTxt {
+  max-width: 80%;
+  overflow: auto;
 }
 .editBox {
   width: 100%;
@@ -138,4 +155,28 @@
 .editBTN:hover {
   background-color: white;
   color: brown;
+}
+@media only screen and (max-width: 768px) {
+  .todoTxt {
+    max-width: 70%;
+    overflow: auto;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .todoTxt {
+    max-width: 60%;
+    overflow: auto;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .todoTxt {
+    max-width: 50%;
+    overflow: auto;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .todoTxt {
+    max-width: 40%;
+    overflow: auto;
+  }
 }

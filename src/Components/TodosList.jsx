@@ -3,6 +3,12 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { Checkbox } from "antd";
 import { Link } from "react-router-dom";
+import {
+  RemoveTodo,
+  HandleTrue,
+  HandleFalse,
+  SetValue,
+} from "../Redux/Action/Actions";
 
 const TodosList = () => {
   const todos = useSelector((state) => state.addTodoReducer);
@@ -11,25 +17,17 @@ const TodosList = () => {
     <div className="todosList">
       {todos.map((todo) => (
         <div className="todo" key={todo.id}>
-          <span>
-            <span style={{ marginRight: 10 }}>
-              <Checkbox
-                checked={todo.compeleted}
-                onChange={(e) =>
-                  e.target.checked === true
-                    ? dispatch({
-                        type: "HANDEL_TRUE",
-                        payload: { id: todo.id, item: todo },
-                      })
-                    : dispatch({
-                        type: "HANDEL_FALSE",
-                        payload: { id: todo.id, item: todo },
-                      })
-                }
-              />
-            </span>
-            {todo.text}
+          <span style={{ marginRight: 10 }}>
+            <Checkbox
+              checked={todo.compeleted}
+              onChange={(e) =>
+                e.target.checked === true
+                  ? dispatch(HandleTrue(todo, todo.id))
+                  : dispatch(HandleFalse(todo, todo.id))
+              }
+            />
           </span>
+          <span className="todoTxt">{todo.text}</span>
           <span>
             <Link to="./Edit">
               <EditOutlined
@@ -39,17 +37,12 @@ const TodosList = () => {
                   cursor: "pointer",
                   marginRight: 10,
                 }}
-                onClick={() =>
-                  dispatch({
-                    type: "SET_VALUE",
-                    payload: { text: todo.text, id: todo.id },
-                  })
-                }
+                onClick={() => dispatch(SetValue(todo.text, todo.id))}
               />
             </Link>
             <DeleteOutlined
               style={{ fontSize: 20, color: "brown", cursor: "pointer" }}
-              onClick={() => dispatch({ type: "REMOVE", id: todo.id })}
+              onClick={() => dispatch(RemoveTodo(todo.id))}
             />
           </span>
         </div>

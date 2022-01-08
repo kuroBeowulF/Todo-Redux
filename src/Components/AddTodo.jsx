@@ -1,17 +1,13 @@
 import { Input, Button } from "antd";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-
+import { addTodo } from "../Redux/Action/Actions";
 const AddTodo = () => {
   const [InputValue, setInputValue] = useState("");
   const dispatch = useDispatch();
 
   const add = (e) => {
-    if (InputValue !== "")
-      dispatch({
-        type: "ADD_TODO",
-        payload: InputValue,
-      });
+    if (InputValue !== "") dispatch(addTodo(InputValue));
     setInputValue("");
   };
 

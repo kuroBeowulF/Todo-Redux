@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { RecoverState } from "../Redux/Action/Actions";
 
 const Edit = () => {
   const target = useSelector((state) => state.passValueReducer);
@@ -30,10 +31,7 @@ const Edit = () => {
             type="primary"
             className="editBTN"
             onClick={() =>
-              dispatch({
-                type: "RECOVER_STATE",
-                payload: { boolean: checkValue, id: target.id, text: Evalue },
-              })
+              dispatch(RecoverState(checkValue, target.id, Evalue))
             }
           >
             save
